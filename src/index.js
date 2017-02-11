@@ -3,5 +3,6 @@ import ReactDom from 'react-dom'
 import App from './components/App'
 
 const mount = document.querySelector('#app-mount')
+const locale = mount.getAttribute('lang')
 
-ReactDom.render(<App />, mount)
+ReactDom.render(<App locale={locale} />, mount)

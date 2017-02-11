@@ -1,0 +1,8 @@
+{
+  "de": {
+    "title": "Das erstes Feature heißt „{{name}}“"
+  },
+  "en": {
+    "title": "First feature is called “{{name}}”"
+  }
+}

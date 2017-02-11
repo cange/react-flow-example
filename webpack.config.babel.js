@@ -6,7 +6,8 @@ export default {
     main: './src/index.js',
     vendor: [
       'react',
-      'react-dom'
+      'react-dom',
+      'i18n-js'
     ]
   },
   output: {
@@ -20,12 +21,16 @@ export default {
   module: { // configuration regarding modules
     rules: [ // rules for modules (configure loaders, parser options, etc.)
       {
+        use: 'babel-loader',
         test: /\.jsx?$/,
-        loader: 'babel-loader',
         include: [
           resolve(__dirname, 'src')
         ],
         exclude: '/node_modules/',
+      },
+      {
+        test: /\.json$/,
+        use: 'json-loader'
       }
     ]
   },
@@ -33,7 +38,7 @@ export default {
    // options for resolving module requests
    // (does not apply to resolving to loaders)
 
-     extensions: ['.js', '.json', '.jsx', '.css', '.yml']
+     extensions: ['.js', '.json', '.jsx']
      // extensions that are used
   },
   devtool: 'cheap-module-source-map', // cheap-variant of SourceMap with module mappings
