@@ -1,8 +1,13 @@
 import { join, resolve } from 'path'
+import webpack from 'webpack'
 
 export default {
   entry: {
     main: './src/index.js',
+    vendor: [
+      'react',
+      'react-dom'
+    ]
   },
   output: {
     path: resolve(__dirname, 'dist'),
@@ -31,5 +36,12 @@ export default {
      extensions: ['.js', '.json', '.jsx', '.css', '.yml']
      // extensions that are used
   },
-  devtool: 'cheap-module-source-map', // cheap-variant of SourceMap with module mappings,
+  devtool: 'cheap-module-source-map', // cheap-variant of SourceMap with module mappings
+  plugins: [
+     new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      filename:'vendor.js'
+      // filename:'vendor[hash].js // see https://webpack.js.org/guides/caching/
+    })
+  ]
 }

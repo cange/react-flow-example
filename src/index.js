@@ -1,3 +1,6 @@
+import ReactDom from 'react-dom'
+import App from './components/App'
+
 const mount = document.querySelector('#app-mount')
 
-mount.innerHTML = '<h1>hello world</h1> anmore'
+ReactDom.render(<App />, mount)
