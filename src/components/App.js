@@ -5,6 +5,7 @@ import React, {
 import I18n from 'i18n-js'
 // internal
 import FirstFeature from './first_feature/FirstFeature'
+import style from './app.scss'
 
 class App extends Component {
   constructor(props) {

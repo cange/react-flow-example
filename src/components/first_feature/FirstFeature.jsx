@@ -2,9 +2,10 @@ import React, {
   Component,
   PropTypes
 } from 'react'
-
 import I18n from 'i18n-js'
+// internal
 import translations from './translations'
+import style from './first_feature.scss'
 
 class FirstFeature extends Component {
   constructor(props) {
@@ -27,7 +28,7 @@ class FirstFeature extends Component {
     const { name } = this.props
 
     return (
-      <div>
+      <div className="panel">
         <h2>{I18n.t('title', { name })}</h2>
         <button onClick={this._handleClick}>Toggle locale</button>
       </div>

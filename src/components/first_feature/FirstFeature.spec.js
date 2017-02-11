@@ -18,7 +18,7 @@ describe('FirstFeature', () => {
     expect(mount.textContent).toBe('First feature is called “Blubber”Toggle locale')
   })
 
-  describe('When language toggle is clicked', () => {
+  describe('When language toggle has been clicked', () => {
     beforeEach(() => {
       $('button').trigger('click')
     })
