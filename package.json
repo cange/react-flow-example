@@ -1,0 +1,21 @@
+{
+  "name": "react-flow",
+  "version": "1.0.0",
+  "description": "displays the whole setup of a react app",
+  "main": "src/app.js",
+  "repository": {},
+  "scripts": {
+    "build": "webpack",
+    "build:watch": "webpack --progress --watch",
+    "test": "jest"
+  },
+  "author": "Christian Angermann <christian.angermann@wlw.de>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-env": "^1.1.8",
+    "babel-preset-es2015": "^6.22.0",
+    "webpack": "^2.2.1"
+  }
+}
